@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThisLookInfected.Login">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="5">
+            <Label Text="Email" />
+            <Entry />
+            <Label Text="Password" />
+            <Entry IsPassword="True"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
+                <Label Text="Forgot your password? Tap here." Grid.Row="0" Grid.Column="0" />
+                <Button Text="Login" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

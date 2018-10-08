@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThisLookInfected.NewPost">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="5">
+            <Label Text="Email?* (Required)" />
+            <Entry />
+            <Label Text="Name?* (Required)" />
+            <Entry />
+            <Label Text="Password?* (Required)" />
+            <Entry IsPassword="True"/>
+            <Label Text="Confirm Password?* (Required)" />
+            <Entry IsPassword="True"/>
+            <Label Text="Tell Us About You?" />
+            <Entry HeightRequest="100" />
+            <Button Text="Register?" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

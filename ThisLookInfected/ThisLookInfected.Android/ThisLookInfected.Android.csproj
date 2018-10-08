@@ -99,5 +99,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\bruise.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\blister.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

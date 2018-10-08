@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThisLookInfected.HomeMasterDetailPageDetail"
              Title="This Look Infected?">
-    <ListView x:Name="PostView" RowHeight="500">
+    <ListView x:Name="PostView" 
+              RowHeight="500">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -11,7 +12,7 @@
                         <Image Source="{Binding Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
                         <StackLayout Orientation="Horizontal">
                             <Button Text="^" HorizontalOptions="CenterAndExpand" />
-                            <Label Text="{Binding CommentCount, StringFormat='Comment(s) {0:F0}'}" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding CommentCount, StringFormat='Comment(s) {0:F0}'}" HorizontalOptions="CenterAndExpand" />
                             <Button Text="~" HorizontalOptions="CenterAndExpand" />
                         </StackLayout>
                     </StackLayout>
