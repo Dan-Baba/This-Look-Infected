@@ -3,10 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThisLookInfected.Settings">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical" Padding="5">
+            
+            <!-- NSFW Toggle -->
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                        <Label FontAttributes="Bold" FontSize="Large" Text="NSFW Toggle?" />
+                        <Label Text="Default setting is off." />
+                    </StackLayout>
+                <Switch IsToggled="True" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            
+            <!-- Comment Sort -->
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold" FontSize="Large" Text="Comment Sort?" />
+                    <Label Text="Default setting is hot." />
+                </StackLayout>
+            </StackLayout>
+            
+            <!-- Page Sort -->
+            
+            <!-- Language -->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

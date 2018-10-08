@@ -29,6 +29,7 @@ namespace ThisLookInfected
             Posts = new ObservableCollection<Post>();
 
             PostView.ItemsSource = Posts;
+            PostView.ItemTapped += TapGestureRecognizer_Tapped;
 
             LoadData();
         }
@@ -42,6 +43,10 @@ namespace ThisLookInfected
             }
         }
 
-
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SinglePost((Post)PostView.SelectedItem));
+            PostView.SelectedItem = null;
+        }
     }
 }

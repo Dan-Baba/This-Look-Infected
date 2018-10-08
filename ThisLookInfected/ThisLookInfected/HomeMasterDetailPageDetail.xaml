@@ -4,11 +4,14 @@
              x:Class="ThisLookInfected.HomeMasterDetailPageDetail"
              Title="This Look Infected?">
     <ListView x:Name="PostView" 
-              RowHeight="500">
+              RowHeight="500"
+              SelectionMode="Single">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" x:Name="SinglePost">
+                        
+                        
                         <Image Source="{Binding Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
                         <StackLayout Orientation="Horizontal">
                             <Button Text="^" HorizontalOptions="CenterAndExpand" />
