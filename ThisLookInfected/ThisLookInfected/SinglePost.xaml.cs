@@ -12,9 +12,8 @@ namespace ThisLookInfected
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SinglePost : ContentPage
 	{
-        //public Post Post { get; set; }
-        public string image = "";
-        public uint commentCount = 0;
+        public Post Post { get; set; }
+
 		public SinglePost ()
 		{
 			InitializeComponent ();
@@ -22,8 +21,8 @@ namespace ThisLookInfected
 
         public SinglePost(Post post)
         {
-            this.image = post.Image;
-            this.commentCount = post.CommentCount;
+            this.BindingContext = this;
+            this.Post = post;
             InitializeComponent();
         }
 	}

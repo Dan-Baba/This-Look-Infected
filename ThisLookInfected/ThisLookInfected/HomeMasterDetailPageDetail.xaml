@@ -14,9 +14,60 @@
                         
                         <Image Source="{Binding Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
                         <StackLayout Orientation="Horizontal">
-                            <Button Text="^" HorizontalOptions="CenterAndExpand" />
+                            <Button x:Name="Upvote"
+                                    Text="&#xf062;" 
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="20"
+                                    TextColor="Gray"
+                                    VerticalOptions="CenterAndExpand"
+                                    BorderColor="Transparent"
+                                    BackgroundColor="Transparent"
+                                    Pressed="Upvote_Button_Pressed"
+                                    CommandParameter="{Binding .}">
+                                <Button.Triggers>
+                                    <DataTrigger TargetType="Button"
+                                             Binding="{Binding Upvoted}"
+                                             Value="True">
+                                        <Setter Property="TextColor" Value="Green" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Button"
+                                             Binding="{Binding Upvoted}"
+                                             Value="False">
+                                        <Setter Property="TextColor" Value="Gray" />
+                                    </DataTrigger>
+                                </Button.Triggers>
+                                <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String"
+                                                Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                iOS="Font Awesome 5 Free" 
+                                                WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free" />
+                                </Button.FontFamily>
+                            </Button>
                             <Label Text="{Binding CommentCount, StringFormat='Comment(s) {0:F0}'}" HorizontalOptions="CenterAndExpand" />
-                            <Button Text="~" HorizontalOptions="CenterAndExpand" />
+                            <Button x:Name="Downvote"
+                                    Text="&#xf063;" 
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="20"
+                                    TextColor="Gray"
+                                    VerticalOptions="CenterAndExpand"
+                                    BorderColor="Transparent"
+                                    BackgroundColor="Transparent"
+                                    Pressed="Downvote_Button_Pressed"
+                                    CommandParameter="{Binding .}">
+                                <Button.Triggers>
+                                    <DataTrigger TargetType="Button"
+                                             Binding="{Binding Downvoted}"
+                                             Value="True">
+                                        <Setter Property="TextColor" Value="Red" />
+                                    </DataTrigger>
+                                </Button.Triggers>
+                                <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String"
+                                                Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                iOS="Font Awesome 5 Free" 
+                                                WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free" />
+                                </Button.FontFamily>
+                            </Button>
                         </StackLayout>
                     </StackLayout>
                 </ViewCell>
