@@ -25,5 +25,16 @@ namespace ThisLookInfected
             this.Post = post;
             InitializeComponent();
         }
-	}
+
+        private void Upvote_Button_Pressed(object sender, EventArgs e)
+        {
+            Post.Upvoted = true;
+
+        }
+
+        private void Downvote_Button_Pressed(object sender, EventArgs e)
+        {
+            Post.Downvoted = true;
+        }
+    }
 }

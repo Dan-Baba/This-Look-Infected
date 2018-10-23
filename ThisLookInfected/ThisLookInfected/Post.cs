@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace ThisLookInfected
 {
-    public class Post
+    public class Post: INotifyPropertyChanged
     {
         private bool _upvoted;
         private bool _downvoted;
@@ -20,17 +21,23 @@ namespace ThisLookInfected
             }
             set
             {
-                if (value == true && _upvoted == true)
+
+                if (value && _upvoted)
                 {
                     _upvoted = false;
                 }
                 else
                 {
-                    if (value == true)
+                    if (value)
                     {
-                        _downvoted = false;
+                        Downvoted = false;
                     }
                     _upvoted = value;
+                }
+
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Upvoted"));
                 }
             }
         }
@@ -42,6 +49,7 @@ namespace ThisLookInfected
             }
             set
             {
+
                 if (value == true && _downvoted == true)
                 {
                     _downvoted = false;
@@ -50,12 +58,19 @@ namespace ThisLookInfected
                 {
                     if (value == true)
                     {
-                        _upvoted = false;
+                        Upvoted = false;
                     }
                     _downvoted = value;
                 }
+
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Downvoted"));
+                }
             }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
         // TODO: Add comments to this object.
     }
 }

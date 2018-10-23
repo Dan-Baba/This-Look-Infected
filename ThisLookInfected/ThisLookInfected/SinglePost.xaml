@@ -7,9 +7,53 @@
         <StackLayout Orientation="Vertical">
             <Image Source="{Binding Post.Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
             <StackLayout Orientation="Horizontal">
-                <Button Text="^" HorizontalOptions="CenterAndExpand" />
+                <Button x:Name="Upvote"
+                                    Text="&#xf062;" 
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="20"
+                                    TextColor="Gray"
+                                    VerticalOptions="CenterAndExpand"
+                                    BorderColor="Transparent"
+                                    BackgroundColor="Transparent"
+                                    Pressed="Upvote_Button_Pressed">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                                             Binding="{Binding Post.Upvoted}"
+                                             Value="True">
+                            <Setter Property="TextColor" Value="Green" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String"
+                                                Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                iOS="Font Awesome 5 Free" 
+                                                WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free" />
+                    </Button.FontFamily>
+                </Button>
                 <Label Text="{Binding Post.CommentCount, StringFormat='Comment(s) {0:F0}'}" HorizontalOptions="CenterAndExpand" />
-                <Button Text="~" HorizontalOptions="CenterAndExpand" />
+                <Button x:Name="Downvote"
+                                    Text="&#xf063;" 
+                                    HorizontalOptions="CenterAndExpand"
+                                    FontSize="20"
+                                    TextColor="Gray"
+                                    VerticalOptions="CenterAndExpand"
+                                    BorderColor="Transparent"
+                                    BackgroundColor="Transparent"
+                                    Pressed="Downvote_Button_Pressed">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                                             Binding="{Binding Post.Downvoted}"
+                                             Value="True">
+                            <Setter Property="TextColor" Value="Red" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String"
+                                                Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                iOS="Font Awesome 5 Free" 
+                                                WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free" />
+                    </Button.FontFamily>
+                </Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

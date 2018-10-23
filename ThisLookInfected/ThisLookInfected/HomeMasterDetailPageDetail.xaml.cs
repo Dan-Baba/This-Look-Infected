@@ -17,8 +17,9 @@ namespace ThisLookInfected
         const int TIMES_TO_LOOP_POSTS = 50;
         public ObservableCollection<Post> posts = new ObservableCollection<Post>(new[]
             {
-                new Post{ Title = "Test Post", Image = "bruise.jpg", CommentCount = 42, Upvoted = true, Downvoted = false },
-                new Post{ Title = "Sweet Blist", Image = "blister.jpg", CommentCount = 105, Upvoted = false, Downvoted = true }
+                new Post{ Title = "Baseball Injury", Image = "bruise.jpg", CommentCount = 42, Upvoted = true, Downvoted = false },
+                new Post{ Title = "Sweet Blist", Image = "blister.jpg", CommentCount = 105, Upvoted = false, Downvoted = true },
+                new Post{ Title = "What's This?", Image = "petechiae.jpg", CommentCount = 2, Upvoted = false, Downvoted = false}
             });
 
         public ObservableCollection<Post> Posts { get; set; }
@@ -38,12 +39,9 @@ namespace ThisLookInfected
         public void LoadData()
         {
             Posts.Clear();
-            for (int i = 0; i < TIMES_TO_LOOP_POSTS; i++)
+            foreach (Post post in posts)
             {
-                foreach (Post post in posts)
-                {
-                    Posts.Add(post);
-                }
+                Posts.Add(post);
             }
         }
 
@@ -55,7 +53,10 @@ namespace ThisLookInfected
 
         private void Upvote_Button_Pressed(object sender, EventArgs e)
         {
-            ((sender as Button).CommandParameter as Post).Upvoted = true;
+            Button button = (sender as Button);
+            Post post = (button.CommandParameter as Post);
+            post.Upvoted = true;
+
         }
 
         private void Downvote_Button_Pressed(object sender, EventArgs e)

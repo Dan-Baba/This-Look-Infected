@@ -30,11 +30,6 @@
                                              Value="True">
                                         <Setter Property="TextColor" Value="Green" />
                                     </DataTrigger>
-                                    <DataTrigger TargetType="Button"
-                                             Binding="{Binding Upvoted}"
-                                             Value="False">
-                                        <Setter Property="TextColor" Value="Gray" />
-                                    </DataTrigger>
                                 </Button.Triggers>
                                 <Button.FontFamily>
                                     <OnPlatform x:TypeArguments="x:String"
