@@ -14,10 +14,9 @@ namespace ThisLookInfected
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeMasterDetailPageDetail : ContentPage
     {
-        const int TIMES_TO_LOOP_POSTS = 50;
         public ObservableCollection<Post> posts = new ObservableCollection<Post>(new[]
             {
-                new Post{ Title = "Baseball Injury", Image = "bruise.jpg", CommentCount = 42, Upvoted = true, Downvoted = false },
+                new Post{ Title = "Baseball Injury, Bruise", Image = "bruise.jpg", CommentCount = 42, Upvoted = true, Downvoted = false },
                 new Post{ Title = "Sweet Blist", Image = "blister.jpg", CommentCount = 105, Upvoted = false, Downvoted = true },
                 new Post{ Title = "What's This?", Image = "petechiae.jpg", CommentCount = 2, Upvoted = false, Downvoted = false}
             });
@@ -34,6 +33,13 @@ namespace ThisLookInfected
             PostView.ItemTapped += TapGestureRecognizer_Tapped;
 
             LoadData();
+        }
+
+        public HomeMasterDetailPageDetail(string searchText) : this()
+        {
+            this.Posts = new ObservableCollection<Post>(this.Posts.Where(p => p.Title.ToLower().Contains(searchText.ToLower())));
+            PostView.ItemsSource = Posts;
+            PostView.ItemTapped += TapGestureRecognizer_Tapped;
         }
 
         public void LoadData()

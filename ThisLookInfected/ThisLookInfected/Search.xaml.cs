@@ -16,5 +16,10 @@ namespace ThisLookInfected
 		{
 			InitializeComponent ();
 		}
-	}
+
+        async void Button_Pressed(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HomeMasterDetailPageDetail(SearchBox.Text));
+        }
+    }
 }
