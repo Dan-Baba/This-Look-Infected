@@ -40,6 +40,7 @@ namespace ThisLookInfected
                 new HomeMasterDetailPageMenuItem { Id = 3, Title = "New Post", TargetType = typeof(NewPost) },
                 new HomeMasterDetailPageMenuItem { Id = 4, Title = "Search", TargetType = typeof(Search) },
                 new HomeMasterDetailPageMenuItem { Id = 5, Title = "Settings", TargetType = typeof(Settings) },
+                new HomeMasterDetailPageMenuItem { Id = 6, Title = "Account", TargetType = typeof(Account)}
                 });
             }
             

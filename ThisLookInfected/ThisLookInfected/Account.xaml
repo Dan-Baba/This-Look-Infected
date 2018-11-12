@@ -4,9 +4,22 @@
              x:Class="ThisLookInfected.Account">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Dan Foote?"
+                   FontSize="Large"
+                   HeightRequest="60"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"/>
+            <Label Text="Fun Facts and Stats?"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Label Text="Has told 256 people to go to the doctor!" />
+            <Label Text="Has told 128 people to stay home!" />
+            <Label Text="Has made 42 comments!" />
+            <Label Text="Has made 53 posts!" />
+            <Label Text="About?"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Hello my name is Dan and I got arrested for pretending to be a doctor in the state of Florida. I hate cats, small rodents, and anyone who tries to get emotionally close to me. I only enjoy beards and beard accessories. I'm getting married soon too. My exisitence is pain and I'm just here to see some gross stuff on the internet." />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
