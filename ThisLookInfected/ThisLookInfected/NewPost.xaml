@@ -4,17 +4,36 @@
              x:Class="ThisLookInfected.NewPost">
     <ContentPage.Content>
         <StackLayout Padding="5">
-            <Label Text="Email?* (Required)" />
+            <Button x:Name="CameraButton"
+                    Text="&#xf083;" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="50"
+                    TextColor="Gray"
+                    VerticalOptions="CenterAndExpand"
+                    BorderColor="Transparent"
+                    BackgroundColor="Transparent">
+                <Button.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String"
+                                        Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                        iOS="Font Awesome 5 Free" 
+                                        WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free" />
+                </Button.FontFamily>
+            </Button>
+            <Label Text="Title?" />
             <Entry />
-            <Label Text="Name?* (Required)" />
+            <Label Text="Description" />
+            <Editor />
+            <Label Text="Tags? (Comma Separated Tags)" />
             <Entry />
-            <Label Text="Password?* (Required)" />
-            <Entry IsPassword="True"/>
-            <Label Text="Confirm Password?* (Required)" />
-            <Entry IsPassword="True"/>
-            <Label Text="Tell Us About You?" />
-            <Entry HeightRequest="100" />
-            <Button Text="Register?" HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Picker Title="Is this NSFW?">
+                    <Picker.Items>
+                        <x:String>NSFW</x:String>
+                        <x:String>SFW</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button Text="Submit" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

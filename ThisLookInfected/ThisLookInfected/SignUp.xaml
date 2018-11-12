@@ -13,7 +13,7 @@
             <Label Text="Confirm Password?* (Required)" />
             <Entry IsPassword="True"/>
             <Label Text="Tell Us About You?" />
-            <Editor MinimumHeightRequest="200" />
+            <Editor MinimumHeightRequest="200"  />
             <Button Text="Register?" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
