@@ -14,7 +14,7 @@
             <Entry IsPassword="True"/>
             <Label Text="Tell Us About You?" />
             <Editor MinimumHeightRequest="200"  />
-            <Button Text="Register?" HorizontalOptions="FillAndExpand" />
+            <Button Text="Register?" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

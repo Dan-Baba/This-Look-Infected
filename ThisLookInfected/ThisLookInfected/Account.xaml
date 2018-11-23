@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ThisLookInfected.Account">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="5">
             <Label Text="Dan Foote?"
                    FontSize="Large"
                    HeightRequest="60"

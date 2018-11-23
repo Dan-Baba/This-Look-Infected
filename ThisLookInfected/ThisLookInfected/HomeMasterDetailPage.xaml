@@ -4,8 +4,8 @@
              x:Class="ThisLookInfected.HomeMasterDetailPage"
              xmlns:pages="clr-namespace:ThisLookInfected">
   <MasterDetailPage.Master>
-    <pages:HomeMasterDetailPageMaster x:Name="MasterPage" />
-  </MasterDetailPage.Master>
+        <pages:HomeMasterDetailPageMaster x:Name="MasterPage"/>
+    </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
     <NavigationPage>
       <x:Arguments>

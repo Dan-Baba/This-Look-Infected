@@ -13,7 +13,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                 </Grid.RowDefinitions>
-                <Label Text="Forgot your password? Tap here." Grid.Row="0" Grid.Column="0" />
+                <Label Text="Forgot your password? Enter your email above and tap here." Grid.Row="0" Grid.Column="0" x:Name="ForgotPassword"/>
                 <Button Text="Login" HorizontalOptions="EndAndExpand" Grid.Row="0" Grid.Column="1" Clicked="Button_Clicked"/>
             </Grid>
         </StackLayout>

@@ -16,6 +16,14 @@ namespace ThisLookInfected
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            MasterPage.LoginStatus = false;
+        }
+
+        public HomeMasterDetailPage(Boolean loggedInStatus)
+        {
+            InitializeComponent();
+            MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            MasterPage.LoginStatus = true;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
