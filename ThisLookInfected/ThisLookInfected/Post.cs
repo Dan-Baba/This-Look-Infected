@@ -13,6 +13,8 @@ namespace ThisLookInfected
         public string Title { get; set; }
         public string Image { get; set; }
         public uint CommentCount { get; set; }
+        public List<Comment> Comments { get; set; }
+
         public bool Upvoted
         {
             get
