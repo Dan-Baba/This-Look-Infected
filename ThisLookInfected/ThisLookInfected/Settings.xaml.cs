@@ -15,6 +15,41 @@ namespace ThisLookInfected
 		public Settings ()
 		{
 			InitializeComponent ();
-		}
-	}
+
+            //Items for the Page Sort
+            PickerPage.Items.Add("Hot");
+            PickerPage.Items.Add("Rising");
+            PickerPage.Items.Add("New");
+            PickerPage.SelectedIndex = 1;
+            //Items for the comment sort
+            PickerCom.Items.Add("Hot");
+            PickerCom.Items.Add("New");
+            PickerCom.SelectedIndex = 1;
+            //Items for langauge
+            PickerLang.Items.Add("English");
+            PickerLang.Items.Add("Spanish");
+            PickerLang.SelectedIndex = 1;
+
+
+        }
+    
+        //Class for showing picked value for page
+        private void PickerPage_OnSelectedIndexChanged(object sender, EventArgs args)
+        {
+            var name = PickerPage.Items[PickerPage.SelectedIndex];
+           
+        }
+        //Class for showing picked value for comments
+        private void PickerCom_OnSelectedIndexChanged(object sender, EventArgs args)
+        {
+            var name = PickerCom.Items[PickerCom.SelectedIndex];
+
+        }
+        //For Langauge
+        private void PickerLang_OnSelectedIndexChanged(object sender, EventArgs args)
+        {
+            var name = PickerLang.Items[PickerLang.SelectedIndex];
+
+        }
+    }
 }

@@ -19,12 +19,32 @@
                 <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
                     <Label FontAttributes="Bold" FontSize="Large" Text="Comment Sort?" />
                     <Label Text="Default setting is hot." />
+                    <Picker x:Name="PickerCom" SelectedIndexChanged="PickerCom_OnSelectedIndexChanged">
+
+                    </Picker>
                 </StackLayout>
             </StackLayout>
             
             <!-- Page Sort -->
-            
-            <!-- Language -->
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold" FontSize="Large" Text="Page Sort?" />
+                    <Label Text="Default setting is hot." />
+                    <Picker x:Name="PickerPage" SelectedIndexChanged="PickerPage_OnSelectedIndexChanged">
+                        
+                    </Picker>
+                </StackLayout>
+        </StackLayout>
+        <!-- Language -->
+                <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                    <Label FontAttributes="Bold" FontSize="Large" Text="Langauge?" />
+                    <Label Text="Default setting is English." />
+                    <Picker x:Name="PickerLang" SelectedIndexChanged="PickerLang_OnSelectedIndexChanged">
+
+                    </Picker>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
