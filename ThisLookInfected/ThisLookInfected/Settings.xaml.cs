@@ -20,15 +20,15 @@ namespace ThisLookInfected
             PickerPage.Items.Add("Hot");
             PickerPage.Items.Add("Rising");
             PickerPage.Items.Add("New");
-            PickerPage.SelectedIndex = 1;
+            PickerPage.SelectedIndex = 0;
             //Items for the comment sort
             PickerCom.Items.Add("Hot");
             PickerCom.Items.Add("New");
-            PickerCom.SelectedIndex = 1;
+            PickerCom.SelectedIndex = 0;
             //Items for langauge
             PickerLang.Items.Add("English");
             PickerLang.Items.Add("Spanish");
-            PickerLang.SelectedIndex = 1;
+            PickerLang.SelectedIndex = 0;
 
 
         }
